@@ -29,7 +29,7 @@ object ChillBuild extends Build {
 
     // Twitter Hadoop needs this, sorry 1.7 fans
     javacOptions ++= Seq("-target", "1.6", "-source", "1.6", "-Xlint:-options"),
-    javacOptions in doc := Seq("-source", "1.6"),
+    javacOptions in doc := Seq("-source", "1.6", "-Xdoclint:none"),
 
     resolvers ++= Seq(
       Opts.resolver.sonatypeSnapshots,
